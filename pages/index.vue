@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        kits_nuxt
+        KiTS
       </h1>
       <h2 class="subtitle">
-        Nuxt version of KiTS
+        Komatsu interactive Troubleshooting System
       </h2>
       <div class="links">
         <a

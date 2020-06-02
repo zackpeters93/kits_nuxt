@@ -18,7 +18,11 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+ loading: { color: '#140a9a', height: '4px', duration: 5000 },
+ loadingIndicator: {
+   name: 'circle',
+   color: '#140a9a'
+ },
   /*
   ** Global CSS
   */
@@ -40,7 +44,27 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    [
+      'nuxt-fontawesome', {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set:'@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ],
+    '@nuxtjs/axios',
   ],
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
+    credentials: false
+  },
+
   /*
   ** Build configuration
   */
@@ -50,5 +74,20 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
+    fbAPIKey: 'AIzaSyB4uttLQU61vyIppX2Tqgh447CNFuW7Vjo'
+  },
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
+  // router: {
+  //   middleware: 'log'
+  // }
+  // serverMiddleware: [
+  //   bodyParser.json(),
+  //   '~/api'
+  // ]
 }
