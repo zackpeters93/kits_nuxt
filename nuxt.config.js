@@ -76,10 +76,10 @@ export default {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
-    fbAPIKey: 'AIzaSyB4uttLQU61vyIppX2Tqgh447CNFuW7Vjo'
+    baseUrl: process.env.BASE_URL || 'https://kitsnuxt.firebaseio.com/',
+    fbAPIKey: 'AIzaSyAYUyiRz4MCUBuT0jTlMLsT3NGSSpQ17_A'
   },
-  transition: {
+  pageTransition: {
     name: 'fade',
     mode: 'out-in'
   },

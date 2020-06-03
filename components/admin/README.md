@@ -1,0 +1,1 @@
+The admin section on components is where I'll put the reusable forms for CRUD of content.
